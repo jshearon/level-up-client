@@ -35,7 +35,8 @@ code {
 }
 
 .nav-item {
-    list-style-type: none;
+		list-style-type: none;
+		margin: 1vw;
 }
 
 /* General button style */

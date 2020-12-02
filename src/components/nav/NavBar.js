@@ -5,15 +5,27 @@ import "./NavBar.css"
 export const NavBar = (props) => {
     return (
         <ul className="navbar">
-            <li className="navbar__item">
-                Navigation link
-            </li>
-            <li className="navbar__item">
-                Navigation link
-            </li>
-            <li className="navbar__item">
-                Navigation link
-            </li>
+            <li className="nav-item">
+                        <button className="nav-link fakeLink"
+                            onClick={() => {
+                                props.history.push({ pathname: "/" })
+                            }}
+                        >Games</button>
+                    </li>
+                    <li className="nav-item">
+                        <button className="nav-link fakeLink"
+                            onClick={() => {
+                                props.history.push({ pathname: "/events" })
+                            }}
+                        >Events</button>
+                    </li>
+                    <li className="nav-item">
+                        <button className="nav-link fakeLink"
+                            onClick={() => {
+                                props.history.push({ pathname: "/profile" })
+                            }}
+                        >Profile</button>
+                    </li>
             {
                 (localStorage.getItem("lu_token") !== null) ?
                     <li className="nav-item">
